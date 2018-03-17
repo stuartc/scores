@@ -1,8 +1,9 @@
 # frozen_string_literal: true
-require "spec_helper"
+
+require 'spec_helper'
 
 describe Scores do
-  context "parse!" do
+  context 'parse!' do
     let(:example) do
       File.read('spec/example_input.txt')
     end

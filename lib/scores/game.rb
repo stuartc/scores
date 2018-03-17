@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Scores
   class Game
     attr_reader :sides

@@ -10,7 +10,7 @@ class Scores
   end
 end
 
-require "scores/result"
-require "scores/tournament"
-require "scores/game"
-require "scores/parser"
+require 'scores/result'
+require 'scores/tournament'
+require 'scores/game'
+require 'scores/parser'

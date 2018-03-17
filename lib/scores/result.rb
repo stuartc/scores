@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Scores
   TeamResult = Struct.new(:name, :position, :points)
 
@@ -10,10 +11,10 @@ class Scores
 
     def leaderboard
       tournament.points
-        .sort_by(&:name)
-        .sort_by { |points_result| -points_result.points }
-        .each.with_index.reduce([nil, []], &method(:assign_position))
-        .slice(1)
+                .sort_by(&:name)
+                .sort_by { |points_result| -points_result.points }
+                .each.with_index.reduce([nil, []], &method(:assign_position))
+                .slice(1)
     end
 
     private
@@ -23,11 +24,11 @@ class Scores
         if previous && points_result.points == previous.points
           previous.position
         else
-          index+1
+          index + 1
         end
 
       team_result =
-      TeamResult.new(points_result.name, position, points_result.points)
+        TeamResult.new(points_result.name, position, points_result.points)
 
       [team_result, list << team_result]
     end

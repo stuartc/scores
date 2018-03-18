@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 class Scores
-  TeamResult = Struct.new(:name, :position, :points)
+  TeamResult = Struct.new(:name, :position, :points) do
+    def to_s
+      "#{position}. #{name}, #{points} #{points == 1 ? 'pt' : 'pts'}"
+    end
+  end
 
   class Result
     attr_reader :tournament

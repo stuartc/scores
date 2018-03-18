@@ -2,9 +2,9 @@
 
 class Scores
   class << self
-    def parse!(results)
+    def parse!(input)
       tournament =
-        Tournament.new results.split("\n").map(&Parser.method(:from_string))
+        Tournament.new input.split("\n").map(&Parser.method(:from_string))
       Result.new(tournament)
     end
   end

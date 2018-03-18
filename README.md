@@ -1,6 +1,15 @@
 Scores
 ======
 
+## Usage
+
+```
+# Using a file
+./bin/scores file_name.txt
+# Using STDIN
+cat file_name.txt | ./bin/scores
+```
+
 ## Running the tests
 
 The tests can be run using `rspec`.
